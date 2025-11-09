@@ -118,7 +118,7 @@ body, html {
     justify-content: center;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 32px;
+    padding: 1px;
     height: auto;
     border-radius: 12px;
     margin: 20px auto 20px auto;
@@ -242,4 +242,5 @@ body, html {
     100% { background-position: 0% 50%; }
 
 }
+
 
