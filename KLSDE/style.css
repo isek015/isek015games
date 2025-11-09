@@ -23,7 +23,7 @@ body, html {
 }
 
 #footer {
-    padding: 0px 32px;
+    padding: 0px 0px;
     margin: 0px;
     position: fixed;
     bottom: 0;
@@ -241,6 +241,7 @@ body, html {
 .back {
     justify-content: left;
     text-align: left;
+    padding: 0px 16px;
 }
 
 .back img:hover {
@@ -250,4 +251,6 @@ body, html {
 .copyright {
     justify-content: right;
     text-align: right;
+    padding: 0px 16px;
 }
+
