@@ -176,10 +176,15 @@ body, html {
     margin: 16px;
     font-size: 18px;
     text-align: center;
-    color: rgb(250, 135, 235);
+    color: rgb(122, 237, 169); /* Sui color */
     background-color: rgb(26, 26, 26);
     border-radius: 12px;
     box-sizing: border-box;
+    transition: transform 0.3s ease; /* płynne przejście */
+}
+
+.button:hover {
+    transform: scale(1.2); /* powiększenie o 20% */
 }
 
 .button img {
@@ -235,4 +240,5 @@ body, html {
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+
 }
