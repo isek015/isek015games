@@ -7,6 +7,7 @@ body, html {
     background: url('sources/bg.webp') no-repeat center center fixed;
     background-size: cover;
 }
+
 /* Timer Styles */
 #countdownTimer {
     position: fixed;
@@ -22,29 +23,30 @@ body, html {
     animation: rgb-color 3s infinite;
 }
 
+/* Footer */
 #footer {
-    padding: 0px 0px;
-    margin: 0px;
+    margin: 0;
     position: fixed;
     bottom: 0;
     width: 100%;
-    position: fixed;
-    flex-direction: row;
     display: flex;
     justify-content: space-between;
     color: white;
     align-items: flex-end;
+    padding: 5px 10px;
 }
 
+/* RGB Animation */
 @keyframes rgb-color {
     0% { color: red; }
     33% { color: green; }
     66% { color: blue; }
     100% { color: red; }
 }
-/* Banner Styles */
+
+/* Banner */
 .banner {
-    padding-top: 50px;
+    padding-top: 60px;
     text-align: center;
     margin: 20px 0;
 }
@@ -55,7 +57,7 @@ body, html {
     border-radius: 16px;
 }
 
-/* Gallery Styles */
+/* Gallery */
 .gallery {
     text-align: center;
     margin-bottom: 20px;
@@ -64,19 +66,16 @@ body, html {
 .gallery .main-image {
     width: 100%;
     max-width: 640px;
-    height: auto;
     aspect-ratio: 16 / 9;
     margin: 0 auto;
     border-radius: 8px;
     overflow: hidden;
-    position: relative;
 }
 
 .gallery .main-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -113,14 +112,15 @@ body, html {
     padding: 20px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 16px;
+    gap: 20px;
 }
 
-/* Left Section: Gallery + Text */
+/* Left Section */
 .left-section {
     flex: 2;
-    margin-right: 20px;
 }
 
+/* Text */
 .text-box {
     margin-top: 20px;
 }
@@ -136,14 +136,14 @@ body, html {
     color: white;
 }
 
-/* Download Button */
-.download-btn {
+/* Buttons */
+.download-btn,
+.download-btn1 {
     display: block;
     width: 200px;
-    margin: 0 auto 30px auto;
+    margin: 20px auto;
     padding: 15px;
     text-align: center;
-    background-color: #6199DB;
     color: white;
     font-size: 18px;
     border-radius: 5px;
@@ -151,11 +151,23 @@ body, html {
     transition: background-color 0.3s ease;
 }
 
+.download-btn {
+    background-color: #6199DB;
+}
+
 .download-btn:hover {
     background-color: #4D7AAF;
 }
 
-/* Right Section: Suisei Image */
+.download-btn1 {
+    background-color: #A4C639;
+}
+
+.download-btn1:hover {
+    background-color: #7d9339;
+}
+
+/* Right Section */
 .right-section {
     flex: 1;
     text-align: right;
@@ -165,35 +177,29 @@ body, html {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    transition: opacity 0.3s ease-in-out;
 }
 
-.right-section img.fade-out {
-    opacity: 0;
-}
-
-/* System Requirements Container */
+/* Requirements */
 .requirements-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 20px;
-    margin-left: 150px;
     max-width: 1200px;
-    width: 100%; /* Ensure the container uses full width */
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
 }
 
 .requirements-table {
     flex: 2;
-    margin-right: 20px;
-    width: 100%; /* Adjust to fit within the parent container */
-    max-width: 1000px; /* Set max width as needed */
+    width: 100%;
     border-collapse: collapse;
     background-color: #2a475e;
 }
 
-
-.requirements-table th, .requirements-table td {
+.requirements-table th,
+.requirements-table td {
     border: 1px solid #66c0f4;
     padding: 15px;
     text-align: left;
@@ -205,44 +211,22 @@ body, html {
     color: #66c0f4;
 }
 
-.requirements-table td {
-    background-color: #2a475e;
-}
-
 .requirements-table tr:nth-child(even) td {
     background-color: #1b2838;
 }
 
+/* Image */
 .specs-image {
-    flex: 1; /* Ensure the image takes less space */
-    max-width: 290px; /* Adjust this to your preferred width */
+    flex: 1;
+    max-width: 290px;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 30px;
-}
-    /* Download Button */
-.download-btn1 {
-    display: block;
-    width: 200px;
-    margin: 0 auto 30px auto;
-    padding: 15px;
-    text-align: center;
-    background-color: #A4C639;
-    color: white;
-    font-size: 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
 }
 
-.download-btn1:hover {
-    background-color: #7d9339;
-}
-
+/* Back + Copyright */
 .back {
-    justify-content: left;
     text-align: left;
-    padding: 0px 16px;
+    padding: 0 16px;
 }
 
 .back img:hover {
@@ -250,8 +234,64 @@ body, html {
 }
 
 .copyright {
-    justify-content: right;
     text-align: right;
-    padding: 0px 16px;
+    padding: 0 16px;
 }
 
+/* ===================== */
+/* 📱 MOBILE RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+    #countdownTimer {
+        font-size: 1.2rem;
+        padding: 8px 0;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .right-section {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .gallery .thumbnails {
+        flex-wrap: wrap;
+    }
+
+    .gallery .thumbnails img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .requirements-container {
+        flex-direction: column;
+    }
+
+    .requirements-table {
+        font-size: 14px;
+    }
+
+    .specs-image {
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .download-btn,
+    .download-btn1 {
+        width: 90%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+}
