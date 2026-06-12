@@ -55,8 +55,7 @@ const suiseiImages = [
     'sources/suisei0.webp',
     'sources/suisei1.webp',
     'sources/suisei2.webp',
-    'sources/suisei3.webp',
-    'sources/suisei4.webp'
+    'sources/suisei3.webp'
 ];
 const suiseiImage = document.getElementById('suiseiImage');
 
