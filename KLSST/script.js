@@ -1,6 +1,6 @@
 // Countdown Timer JavaScript
 const countdownElement = document.getElementById('countdownTimer');
-const countdownDate = new Date("May 30, 2026 12:00:00 GMT+1"); // Adjust to Polish time (CET)
+const countdownDate = new Date("June 30, 2026 17:00:00 GMT+1"); // Adjust to Polish time (CET)
 
 function updateCountdown() {
     const now = new Date().getTime();
