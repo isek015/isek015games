@@ -252,7 +252,7 @@ body, html {
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 12px 0;
+    padding: 5px 0;                    /* 5px góra + 5px dół */
     background: rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: space-between;
@@ -260,12 +260,14 @@ body, html {
     color: white;
     z-index: 100;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: auto;                  /* pozwala na automatyczną wysokość */
+    line-height: 1.4;                  /* ładne odstępy między liniami */
 }
 
 .back {
     padding-left: 20px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .back img {
@@ -281,6 +283,7 @@ body, html {
     padding-right: 20px;
     font-size: 14px;
     opacity: 0.9;
+    margin: 0;                         /* usuwa dodatkowe marginesy */
 }
 
 /* ====================== */
