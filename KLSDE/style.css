@@ -206,7 +206,7 @@ body, html {
 .requirements-table thead th {
     background: linear-gradient(180deg, #2c2c2c, #111111);
     color: #e0e0e0;
-    padding: 18px;
+    padding: 22px 16px;     /* Zwiększony padding góra/dół */
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -221,8 +221,9 @@ body, html {
     background: rgba(25, 25, 25, 0.95);
 }
 
+/* Usunięto hover - brak zmiany koloru przy najechaniu */
 .requirements-table tbody tr:hover {
-    background: rgba(60, 60, 60, 0.8);
+    background: inherit; /* lub po prostu usuń całą regułę */
 }
 
 .requirements-table td {
@@ -243,7 +244,6 @@ body, html {
     border-radius: 8px;
     flex-shrink: 0;
 }
-
 /* ====================== */
 /*        FOOTER          */
 /* ====================== */
