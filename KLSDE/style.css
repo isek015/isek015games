@@ -366,18 +366,7 @@ body, html {
 
 .back-btn img {
     width: auto;
-    max-width: 300px;        /* ← Zwiększyłem */
     height: auto;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
-/* Na mniejszych ekranach */
-@media (max-width: 768px) {
-    .back-button-container {
-        bottom: 80px;
-        left: 20px;
-    }
-    .back-btn img {
-        max-width: 120px;    /* ← też powiększony */
-    }
-}
