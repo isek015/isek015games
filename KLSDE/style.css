@@ -345,3 +345,39 @@ body, html {
 .changelog-entry li {
     margin: 6px 0;
 }
+/* ====================== */
+/* backbutton */
+/* ====================== */
+
+/* Fixed Back Button */
+.back-button-container {
+    position: fixed;
+    bottom: 100px;
+    left: 30px;
+    z-index: 1000;
+}
+
+.back-btn {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.08);
+}
+
+/* 100% oryginalnej wielkości pliku back.webp */
+.back-btn img {
+    width: auto;      /* naturalna szerokość */
+    height: auto;     /* naturalna wysokość */
+    max-width: none;  /* wyłącza ograniczenie */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .back-button-container {
+        bottom: 80px;
+        left: 20px;
+    }
+}
