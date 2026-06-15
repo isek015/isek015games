@@ -253,4 +253,63 @@ body, html {
     text-align: right;
     padding: 0px 16px;
 }
+/* ========================= */
+/* CHANGELOG */
+/* ========================= */
 
+.changelog-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(25, 25, 25, 0.9);
+    border-radius: 15px;
+    border: 2px solid #444;
+    color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.changelog-container h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.changelog-desc {
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.changelog-entry {
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #43B581;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.changelog-entry:hover {
+    transform: translateX(5px);
+}
+
+.version {
+    font-size: 22px;
+    font-weight: bold;
+    color: #43B581;
+}
+
+.date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.changelog-entry ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.changelog-entry li {
+    margin: 6px 0;
+}
