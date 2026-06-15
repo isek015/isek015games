@@ -1,13 +1,16 @@
-// Countdown Timer JavaScript
+// ==================== COUNTDOWN TIMER ====================
 const countdownElement = document.getElementById('countdownTimer');
-const countdownDate = new Date("November 9, 2024 22:00:00 GMT+1"); // Adjust to Polish time (CET)
 
 function updateCountdown() {
+    if (!countdownElement) return; // Bezpieczeństwo, jeśli element nie istnieje
+
+    const countdownDate = new Date("November 9, 2024 22:00:00 GMT+1");
     const now = new Date().getTime();
     const distance = countdownDate - now;
 
     if (distance < 0) {
-        countdownElement.innerHTML = "OFICJALNA PREMIERA GRY!";
+        countdownElement.innerHTML = "<strong>OFICJALNA PREMIERA GRY!</strong>";
+        countdownElement.style.color = "#43B581";
         clearInterval(countdownInterval);
         return;
     }
@@ -20,9 +23,15 @@ function updateCountdown() {
     countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
-const countdownInterval = setInterval(updateCountdown, 1000);
+// Uruchom tylko jeśli element istnieje
+let countdownInterval;
+if (countdownElement) {
+    updateCountdown();
+    countdownInterval = setInterval(updateCountdown, 1000);
+}
 
-// JavaScript for Gallery
+
+// ==================== GALLERY ====================
 let currentIndex = 0;
 const images = [
     'sources/gallery/img1.webp',
@@ -31,15 +40,18 @@ const images = [
     'sources/gallery/img4.webp',
     'sources/gallery/img5.webp'
 ];
+
 const mainImage = document.getElementById('mainImage');
 
 function changeImage(src) {
-    mainImage.classList.add('fade-out'); // Apply fade-out effect
+    if (!mainImage) return;
+
+    mainImage.classList.add('fade-out');
 
     setTimeout(() => {
         mainImage.src = src;
-        mainImage.classList.remove('fade-out'); // Remove fade-out and allow fade-in
-    }, 300); // Timeout now matches the 0.3s transition duration
+        mainImage.classList.remove('fade-out');
+    }, 300);
 }
 
 function nextImage() {
@@ -47,9 +59,19 @@ function nextImage() {
     changeImage(images[currentIndex]);
 }
 
-setInterval(nextImage, 5000);
+// Auto-slide co 5 sekund
+let galleryInterval = setInterval(nextImage, 5000);
 
-// JavaScript for Suisei Image rotation
+// Kliknięcie w miniaturkę resetuje timer auto-slide
+document.querySelectorAll('.thumbnails img').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+        clearInterval(galleryInterval);
+        galleryInterval = setInterval(nextImage, 5000);
+    });
+});
+
+
+// ==================== SUISEI IMAGE ROTATION ====================
 let suiseiIndex = 0;
 const suiseiImages = [
     'sources/suisei0.webp',
@@ -58,16 +80,20 @@ const suiseiImages = [
     'sources/suisei3.webp',
     'sources/suisei4.webp'
 ];
+
 const suiseiImage = document.getElementById('suiseiImage');
 
 function nextSuiseiImage() {
+    if (!suiseiImage) return;
+
     suiseiImage.classList.add('fade-out');
 
     setTimeout(() => {
         suiseiIndex = (suiseiIndex + 1) % suiseiImages.length;
         suiseiImage.src = suiseiImages[suiseiIndex];
         suiseiImage.classList.remove('fade-out');
-    }, 500); // Matches the 0.3s transition duration
+    }, 400);
 }
 
+// Auto-rotation co 7 sekund
 setInterval(nextSuiseiImage, 7000);
