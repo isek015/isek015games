@@ -1,4 +1,6 @@
-/* General Styles */
+/* ====================== */
+/*      GENERAL STYLES    */
+/* ====================== */
 body, html {
     margin: 0;
     padding: 0;
@@ -6,8 +8,12 @@ body, html {
     height: 100%;
     background: url('sources/bg.webp') no-repeat center center fixed;
     background-size: cover;
+    color: white;
 }
-/* Timer Styles */
+
+/* ====================== */
+/*         TIMER          */
+/* ====================== */
 #countdownTimer {
     position: fixed;
     top: 0;
@@ -22,27 +28,16 @@ body, html {
     animation: rgb-color 3s infinite;
 }
 
-#footer {
-    padding: 0px 0px;
-    margin: 0px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    align-items: flex-end;
-}
-
 @keyframes rgb-color {
     0% { color: red; }
     33% { color: green; }
     66% { color: blue; }
     100% { color: red; }
 }
-/* Banner Styles */
+
+/* ====================== */
+/*        BANNER          */
+/* ====================== */
 .banner {
     text-align: center;
     margin: 20px 0;
@@ -54,7 +49,9 @@ body, html {
     border-radius: 16px;
 }
 
-/* Gallery Styles */
+/* ====================== */
+/*        GALLERY         */
+/* ====================== */
 .gallery {
     text-align: center;
     margin-bottom: 20px;
@@ -75,12 +72,7 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 1;
     transition: opacity 0.3s ease-in-out;
-}
-
-.gallery .main-image img.fade-out {
-    opacity: 0;
 }
 
 .gallery .thumbnails {
@@ -103,7 +95,9 @@ body, html {
     opacity: 0.7;
 }
 
-/* Content Layout */
+/* ====================== */
+/*       MAIN CONTENT     */
+/* ====================== */
 .content {
     display: flex;
     justify-content: space-between;
@@ -114,7 +108,6 @@ body, html {
     border-radius: 16px;
 }
 
-/* Left Section: Gallery + Text */
 .left-section {
     flex: 2;
     margin-right: 20px;
@@ -135,11 +128,13 @@ body, html {
     color: white;
 }
 
-/* Download Button */
+/* ====================== */
+/*     DOWNLOAD BUTTONS   */
+/* ====================== */
 .download-btn {
     display: block;
     width: 200px;
-    margin: 0 auto 30px auto;
+    margin: 30px auto;
     padding: 15px;
     text-align: center;
     background-color: #6199DB;
@@ -154,76 +149,10 @@ body, html {
     background-color: #4D7AAF;
 }
 
-/* Right Section: Suisei Image */
-.right-section {
-    flex: 1;
-    text-align: right;
-}
-
-.right-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.right-section img.fade-out {
-    opacity: 0;
-}
-
-/* System Requirements Container */
-.requirements-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-    margin-left: 150px;
-    max-width: 1200px;
-    width: 100%; /* Ensure the container uses full width */
-}
-
-.requirements-table {
-    flex: 2;
-    margin-right: 20px;
-    width: 100%; /* Adjust to fit within the parent container */
-    max-width: 1000px; /* Set max width as needed */
-    border-collapse: collapse;
-    background-color: #2a475e;
-}
-
-
-.requirements-table th, .requirements-table td {
-    border: 1px solid #66c0f4;
-    padding: 15px;
-    text-align: left;
-    color: white;
-}
-
-.requirements-table th {
-    background-color: #1b2838;
-    color: #66c0f4;
-}
-
-.requirements-table td {
-    background-color: #2a475e;
-}
-
-.requirements-table tr:nth-child(even) td {
-    background-color: #1b2838;
-}
-
-.specs-image {
-    flex: 1; /* Ensure the image takes less space */
-    max-width: 290px; /* Adjust this to your preferred width */
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
-    /* Download Button */
 .download-btn1 {
     display: block;
     width: 200px;
-    margin: 0 auto 30px auto;
+    margin: 20px auto 30px auto;
     padding: 15px;
     text-align: center;
     background-color: #A4C639;
@@ -238,10 +167,101 @@ body, html {
     background-color: #7d9339;
 }
 
+/* ====================== */
+/*     RIGHT SECTION      */
+/* ====================== */
+.right-section {
+    flex: 1;
+    text-align: right;
+}
+
+.right-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* ====================== */
+/*   SYSTEM REQUIREMENTS  */
+/* ====================== */
+.requirements-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.requirements-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    border: 2px solid #444;
+    background-color: #1f1f1f;
+}
+
+.requirements-table thead th {
+    background: linear-gradient(180deg, #2c2c2c, #111111);
+    color: #e0e0e0;
+    padding: 18px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #555;
+}
+
+.requirements-table tbody tr:nth-child(odd) {
+    background: rgba(45, 45, 45, 0.95);
+}
+
+.requirements-table tbody tr:nth-child(even) {
+    background: rgba(25, 25, 25, 0.95);
+}
+
+.requirements-table tbody tr:hover {
+    background: rgba(60, 60, 60, 0.8);
+}
+
+.requirements-table td {
+    padding: 16px;
+    color: #ffffff;
+    border-bottom: 1px solid #3a3a3a;
+    font-size: 16px;
+}
+
+.requirements-table td:first-child {
+    font-weight: bold;
+    color: #d0d0d0;
+}
+
+.specs-image {
+    max-width: 290px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* ====================== */
+/*        FOOTER          */
+/* ====================== */
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 100;
+}
+
 .back {
-    justify-content: left;
-    text-align: left;
-    padding: 0px 16px;
+    padding-left: 16px;
 }
 
 .back img:hover {
@@ -249,14 +269,12 @@ body, html {
 }
 
 .copyright {
-    justify-content: right;
-    text-align: right;
-    padding: 0px 16px;
+    padding-right: 16px;
 }
-/* ========================= */
-/* CHANGELOG */
-/* ========================= */
 
+/* ====================== */
+/*       CHANGELOG        */
+/* ====================== */
 .changelog-container {
     max-width: 1200px;
     margin: 50px auto;
@@ -264,8 +282,8 @@ body, html {
     background: rgba(25, 25, 25, 0.9);
     border-radius: 15px;
     border: 2px solid #444;
-    color: white;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    color: white;
 }
 
 .changelog-container h2 {
@@ -312,69 +330,4 @@ body, html {
 
 .changelog-entry li {
     margin: 6px 0;
-}
-
-.requirements-wrapper {
-    margin-top: 40px;
-    padding: 25px;
-    background: rgba(20, 20, 20, 0.9);
-    border-radius: 16px;
-    border: 2px solid rgba(120, 120, 120, 0.3);
-    backdrop-filter: blur(6px);
-}
-
-.requirements-wrapper h2 {
-    color: #d6d6d6;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 32px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.15);
-}
-
-.requirements-table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    border: 2px solid #444;
-}
-
-.requirements-table thead th {
-    background: linear-gradient(180deg, #2c2c2c, #111111);
-    color: #e0e0e0;
-    padding: 18px;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #555;
-}
-
-.requirements-table tbody tr {
-    transition: all 0.2s ease;
-}
-
-.requirements-table tbody tr:nth-child(odd) {
-    background: rgba(45, 45, 45, 0.95);
-}
-
-.requirements-table tbody tr:nth-child(even) {
-    background: rgba(25, 25, 25, 0.95);
-}
-
-.requirements-table tbody tr:hover {
-    background: rgba(80, 80, 80, 0.45);
-}
-
-.requirements-table td {
-    padding: 16px;
-    color: #ffffff;
-    border-bottom: 1px solid #3a3a3a;
-    font-size: 16px;
-}
-
-.requirements-table td:first-child {
-    border-right: 1px solid #444;
-    font-weight: bold;
-    color: #d0d0d0;
 }
