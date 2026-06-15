@@ -346,10 +346,8 @@ body, html {
     margin: 6px 0;
 }
 /* ====================== */
-/* backbutton */
+/* BACK BUTTON - POWRÓT */
 /* ====================== */
-
-/* Fixed Back Button */
 .back-button-container {
     position: fixed;
     bottom: 100px;
@@ -363,21 +361,23 @@ body, html {
 }
 
 .back-btn:hover {
-    transform: scale(1.08);
+    transform: scale(1.12);
 }
 
-/* 100% oryginalnej wielkości pliku back.webp */
 .back-btn img {
-    width: auto;      /* naturalna szerokość */
-    height: auto;     /* naturalna wysokość */
-    max-width: none;  /* wyłącza ograniczenie */
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    width: auto;
+    max-width: 300px;        /* ← Zwiększyłem */
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
-/* Responsywność */
+/* Na mniejszych ekranach */
 @media (max-width: 768px) {
     .back-button-container {
         bottom: 80px;
         left: 20px;
+    }
+    .back-btn img {
+        max-width: 120px;    /* ← też powiększony */
     }
 }
