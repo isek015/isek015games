@@ -313,3 +313,63 @@ body, html {
 .changelog-entry li {
     margin: 6px 0;
 }
+.requirements-wrapper {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 16px;
+    border: 1px solid rgba(102, 192, 244, 0.3);
+    backdrop-filter: blur(6px);
+}
+
+.requirements-wrapper h2 {
+    color: #66c0f4;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.requirements-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.requirements-table thead th {
+    background: linear-gradient(135deg, #1b2838, #2a475e);
+    color: #66c0f4;
+    padding: 18px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.requirements-table tbody tr {
+    transition: 0.2s;
+}
+
+.requirements-table tbody tr:nth-child(odd) {
+    background: rgba(42, 71, 94, 0.9);
+}
+
+.requirements-table tbody tr:nth-child(even) {
+    background: rgba(27, 40, 56, 0.9);
+}
+
+.requirements-table tbody tr:hover {
+    background: rgba(102, 192, 244, 0.15);
+    transform: scale(1.01);
+}
+
+.requirements-table td {
+    padding: 16px;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 16px;
+}
+
+.requirements-table td:first-child {
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
